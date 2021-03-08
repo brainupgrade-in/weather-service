@@ -8,6 +8,8 @@ pipeline {
     environment{
         DOCKER_USERNAME = 'brainupgrade'
         DOCKER_PASSWORD = credentials('docker-brainupgrade')
+        GIT_USERNAME = 'brainupgrade-in'
+        GIT_PASSWORD = credentials('bugithub')
     }
     stages {
         stage('docker login') {
@@ -42,7 +44,7 @@ pipeline {
             }
         }
 
-        stage('docker push') {
+        stage('docker repo push') {
             steps{
                 sh(script: """
                     docker push brainupgrade/weather-services:jenkins-${BUILD_NUMBER}
@@ -50,17 +52,31 @@ pipeline {
             }
         }
 
-        stage('deploy') {
+        stage('k8s deploy') {
             steps{
                 sh script: '''
                 #!/bin/bash
-                cd $WORKSPACE/weather-services/
-                #get kubectl for this demo
+                cd $HOME
                 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
                 chmod +x ./kubectl
-                ./kubectl apply -f $WORKSPACE/weather-service/kubernetes/deploy.yaml
+                sed -i 's/weather-services:latest/weather-services:${BUILD_NUMBER}/g' $WORKSPACE/kubernetes/deploy.yaml
+                ./kubectl apply -f $WORKSPACE/kubernetes/deploy.yaml
                 '''
+            }
         }
-    }
-}
+        stage('tag & git push') {
+            steps {
+                sh script: '''
+                #!/bin/bash
+                cd $WORKSPACE/
+                git config --global user.email "jenkins@brainupgrade.in"
+                git config --global user.name "jenkins @ brainupgrade.in"
+                git config --global push.default current
+                git checkout .
+                git tag -a ${BUILD_NUMBER} -m "deployed ${BUILD_NUMBER} to kubernetes cluster"
+                git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/brainupgrade-in/weather-service.git  ${BUILD_NUMBER}
+                '''  
+            }
+        }
+    }  
 }
