@@ -10,6 +10,7 @@ pipeline {
         DOCKER_PASSWORD = credentials('docker-brainupgrade')
         GIT_USERNAME = 'brainupgrade-in'
         GIT_PASSWORD = credentials('bugithub')
+        GIT_TOKEN = credentials('github-bu-token')
     }
     stages {
         stage('docker login') {
@@ -21,7 +22,7 @@ pipeline {
         }
         stage('code checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/jenkins']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/brainupgrade-in/weather-service.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/jenkinsci_example']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/brainupgrade-in/weather-service.git']]])
                 // sh 'mvn clean install'
             }
         }
@@ -74,7 +75,7 @@ pipeline {
                 git config --global push.default current
                 git checkout .
                 git tag -a ${BUILD_NUMBER} -m "deployed ${BUILD_NUMBER} to kubernetes cluster"
-                git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/brainupgrade-in/weather-service.git  ${BUILD_NUMBER}
+                git push https://$GIT_TOKEN@github.com/brainupgrade-in/weather-service.git  ${BUILD_NUMBER}
                 '''  
             }
         }
