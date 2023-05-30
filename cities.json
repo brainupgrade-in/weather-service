@@ -1,0 +1,215 @@
+[
+    {
+      "Version": 1,
+      "Key": "204848",
+      "Type": "City",
+      "Rank": 15,
+      "LocalizedName": "Pune",
+      "EnglishName": "Pune",
+      "PrimaryPostalCode": "",
+      "Region": {
+        "ID": "ASI",
+        "LocalizedName": "Asia",
+        "EnglishName": "Asia"
+      },
+      "Country": {
+        "ID": "IN",
+        "LocalizedName": "India",
+        "EnglishName": "India"
+      },
+      "AdministrativeArea": {
+        "ID": "MH",
+        "LocalizedName": "Maharashtra",
+        "EnglishName": "Maharashtra",
+        "Level": 1,
+        "LocalizedType": "State",
+        "EnglishType": "State",
+        "CountryID": "IN"
+      },
+      "TimeZone": {
+        "Code": "IST",
+        "Name": "Asia/Kolkata",
+        "GmtOffset": 5.5,
+        "IsDaylightSaving": false,
+        "NextOffsetChange": null
+      },
+      "GeoPosition": {
+        "Latitude": 18.499,
+        "Longitude": 73.866,
+        "Elevation": {
+          "Metric": {
+            "Value": 587,
+            "Unit": "m",
+            "UnitType": 5
+          },
+          "Imperial": {
+            "Value": 1925,
+            "Unit": "ft",
+            "UnitType": 0
+          }
+        }
+      },
+      "IsAlias": false,
+      "SupplementalAdminAreas": [
+        {
+          "Level": 2,
+          "LocalizedName": "Pune",
+          "EnglishName": "Pune"
+        },
+        {
+          "Level": 3,
+          "LocalizedName": "Pune City",
+          "EnglishName": "Pune City"
+        }
+      ],
+      "DataSets": [
+        "AirQualityCurrentConditions",
+        "AirQualityForecasts",
+        "Alerts",
+        "FutureRadar",
+        "MinuteCast",
+        "PremiumAirQuality"
+      ]
+    },
+    {
+      "Version": 1,
+      "Key": "679809",
+      "Type": "City",
+      "Rank": 85,
+      "LocalizedName": "Pune",
+      "EnglishName": "Pune",
+      "PrimaryPostalCode": "",
+      "Region": {
+        "ID": "ASI",
+        "LocalizedName": "Asia",
+        "EnglishName": "Asia"
+      },
+      "Country": {
+        "ID": "ID",
+        "LocalizedName": "Indonesia",
+        "EnglishName": "Indonesia"
+      },
+      "AdministrativeArea": {
+        "ID": "MU",
+        "LocalizedName": "North Maluku",
+        "EnglishName": "North Maluku",
+        "Level": 1,
+        "LocalizedType": "Province",
+        "EnglishType": "Province",
+        "CountryID": "ID"
+      },
+      "TimeZone": {
+        "Code": "EIT",
+        "Name": "Asia/Jayapura",
+        "GmtOffset": 9,
+        "IsDaylightSaving": false,
+        "NextOffsetChange": null
+      },
+      "GeoPosition": {
+        "Latitude": 1.81,
+        "Longitude": 127.84,
+        "Elevation": {
+          "Metric": {
+            "Value": 57,
+            "Unit": "m",
+            "UnitType": 5
+          },
+          "Imperial": {
+            "Value": 188,
+            "Unit": "ft",
+            "UnitType": 0
+          }
+        }
+      },
+      "IsAlias": false,
+      "ParentCity": {
+        "Key": "204991",
+        "LocalizedName": "Galela",
+        "EnglishName": "Galela"
+      },
+      "SupplementalAdminAreas": [
+        {
+          "Level": 2,
+          "LocalizedName": "Halmahera Utara",
+          "EnglishName": "Halmahera Utara"
+        },
+        {
+          "Level": 3,
+          "LocalizedName": "Galela",
+          "EnglishName": "Galela"
+        }
+      ],
+      "DataSets": [
+        "AirQualityCurrentConditions",
+        "AirQualityForecasts",
+        "Alerts",
+        "FutureRadar",
+        "MinuteCast"
+      ]
+    },
+    {
+      "Version": 1,
+      "Key": "1867611",
+      "Type": "City",
+      "Rank": 600,
+      "LocalizedName": "Pune",
+      "EnglishName": "Pune",
+      "PrimaryPostalCode": "",
+      "Region": {
+        "ID": "ASI",
+        "LocalizedName": "Asia",
+        "EnglishName": "Asia"
+      },
+      "Country": {
+        "ID": "TL",
+        "LocalizedName": "Timor-Leste",
+        "EnglishName": "Timor-Leste"
+      },
+      "AdministrativeArea": {
+        "ID": "OE",
+        "LocalizedName": "Oekusi-Ambenu",
+        "EnglishName": "Oekusi-Ambenu",
+        "Level": 1,
+        "LocalizedType": "Special Administrative Region",
+        "EnglishType": "Special Administrative Region",
+        "CountryID": "TL"
+      },
+      "TimeZone": {
+        "Code": "TLT",
+        "Name": "Asia/Dili",
+        "GmtOffset": 9,
+        "IsDaylightSaving": false,
+        "NextOffsetChange": null
+      },
+      "GeoPosition": {
+        "Latitude": -9.369,
+        "Longitude": 124.317,
+        "Elevation": {
+          "Metric": {
+            "Value": 350,
+            "Unit": "m",
+            "UnitType": 5
+          },
+          "Imperial": {
+            "Value": 1148,
+            "Unit": "ft",
+            "UnitType": 0
+          }
+        }
+      },
+      "IsAlias": false,
+      "SupplementalAdminAreas": [
+        {
+          "Level": 2,
+          "LocalizedName": "Oesilo",
+          "EnglishName": "Oesilo"
+        }
+      ],
+      "DataSets": [
+        "AirQualityCurrentConditions",
+        "AirQualityForecasts",
+        "FutureRadar",
+        "MinuteCast"
+      ]
+    }
+  ]
