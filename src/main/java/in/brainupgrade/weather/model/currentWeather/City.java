@@ -26,6 +26,10 @@ public class City {
     private Integer woeid;
     @JsonProperty("latt_long")
     private String lattLong;
+    @JsonProperty("latitude")
+    private Double latitude;
+    @JsonProperty("longitude")
+    private Double longitude;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -67,6 +71,26 @@ public class City {
     @JsonProperty("latt_long")
     public void setLattLong(String lattLong) {
         this.lattLong = lattLong;
+    }
+
+    @JsonProperty("latitude")
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    @JsonProperty("latitude")
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    @JsonProperty("longitude")
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    @JsonProperty("longitude")
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
     }
 
     @JsonAnyGetter

@@ -1,46 +1,6 @@
-{
-    "Headline": {
-      "EffectiveDate": "2023-05-30T07:00:00+05:30",
-      "EffectiveEpochDate": 1685410200,
-      "Severity": 7,
-      "Text": "Becoming hotter Tuesday",
-      "Category": "warmer",
-      "EndDate": "2023-05-30T19:00:00+05:30",
-      "EndEpochDate": 1685453400,
-      "MobileLink": "http://www.accuweather.com/en/in/pune/204848/daily-weather-forecast/204848?lang=en-us",
-      "Link": "http://www.accuweather.com/en/in/pune/204848/daily-weather-forecast/204848?lang=en-us"
-    },
-    "DailyForecasts": [
-      {
-        "Date": "2023-05-29T07:00:00+05:30",
-        "EpochDate": 1685323800,
-        "Temperature": {
-          "Minimum": {
-            "Value": 75,
-            "Unit": "F",
-            "UnitType": 18
-          },
-          "Maximum": {
-            "Value": 86,
-            "Unit": "F",
-            "UnitType": 18
-          }
-        },
-        "Day": {
-          "Icon": 2,
-          "IconPhrase": "Mostly sunny",
-          "HasPrecipitation": false
-        },
-        "Night": {
-          "Icon": 34,
-          "IconPhrase": "Mostly clear",
-          "HasPrecipitation": false
-        },
-        "Sources": [
-          "AccuWeather"
-        ],
-        "MobileLink": "http://www.accuweather.com/en/in/pune/204848/daily-weather-forecast/204848?day=1&lang=en-us",
-        "Link": "http://www.accuweather.com/en/in/pune/204848/daily-weather-forecast/204848?day=1&lang=en-us"
-      }
-    ]
-  }
+//https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true
+{"latitude":52.52,"longitude":13.419998,"generationtime_ms":0.11396408081054688,"utc_offset_seconds":0,"timezone":"GMT",
+"timezone_abbreviation":"GMT","elevation":38.0,
+"current_weather":
+{"temperature":8.5,"windspeed":4.6,"winddirection":309.0,"weathercode":2,"is_day":1,"time":"2023-05-30T04:00"}
+}

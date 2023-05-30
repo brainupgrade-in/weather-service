@@ -11,22 +11,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 import in.brainupgrade.weather.model.currentWeather.City;
 import in.brainupgrade.weather.model.currentWeather.WeatherForecast;
+import in.brainupgrade.weather.model.openmeteo.OpenMeteoService;
 
 @RestController
 public class WeatherController {
 
 	@Autowired
-	private RemoteApiFetcher remoteApiFetcher;
+	private OpenMeteoService openMeteoService;
 
 	@PostMapping(value = "/get-weather",consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Optional<WeatherForecast> fetchWeatherForecastFromRemoteApi(@RequestBody City city) {
-		return remoteApiFetcher.fetchWeatherForecastFromRemoteApi(city);
+		return openMeteoService.fetchWeatherForecastFromRemoteApi(city);
 	}
 
 	@PostMapping(value = "/get-cities")
 	@ResponseBody
 	public Optional<City[]> fetchCitiesFromRemoteApi(@RequestBody String cityInput) {
-		return remoteApiFetcher.fetchCitiesFromRemoteApi(cityInput);
+		return openMeteoService.fetchCitiesFromRemoteApi(cityInput);
 	}
 }
